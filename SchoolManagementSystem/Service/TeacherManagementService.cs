@@ -34,17 +34,19 @@ namespace SchoolManagementSystem.Service
 
         public List<Grade> GetTeacherStudentGrades(Teacher teacher, List<Student> gradeList)
         {
-            foreach (var grade in gradeList)
-            {
-                if (grade.Grades == teacher.Subject)
-                {
+            List<Grade> teacherGrades = new List<Grade>();
 
+            foreach (Student student in gradeList)
+            {
+                foreach (Grade grade in student.Grades)
+                {
+                    if (grade.Subject == teacher.Subject)
+                    {
+                        teacherGrades.Add(grade);
+                    }
                 }
             }
-
-                return gradeList;
-
-
+            return teacherGrades;
         }
     }
 }
