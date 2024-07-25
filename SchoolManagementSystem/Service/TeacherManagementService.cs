@@ -32,14 +32,18 @@ namespace SchoolManagementSystem.Service
             Console.WriteLine($"{teacher.FirstName} {teacher.LastName} has graded {student.FirstName} {student.LastName} with grade {grade}");
         }
 
-        public void GetTeacherStudentGrades(Teacher teacher)
+        public List<Grade> GetTeacherStudentGrades(Teacher teacher, List<Student> gradeList)
         {
-            //need grades and loop through them to find subjects 
-            if (teacher.Subject == Grade.Subject)
+            foreach (var grade in gradeList)
             {
-                //loop all teacher.Subject == Grade.Subject
-                Console.WriteLine(xxxx);
+                if (grade.Grades == teacher.Subject)
+                {
+
+                }
             }
+
+                return gradeList;
+
 
         }
     }
