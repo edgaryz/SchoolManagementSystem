@@ -14,6 +14,7 @@ namespace SchoolManagementSystem.Service
 
             Student student1 = new Student("Edgar", "Sokol", 28, 10);
             student1.AddGrade(new Grade("Math", DateOnly.Parse("2024-07-25"), 7));
+            student1.AddGrade(new Grade("Russian", DateOnly.Parse("2024-07-24"), 10));
 
             Student student2 = new Student("Kirill", "Bravin", 33, 10);
 
@@ -22,6 +23,8 @@ namespace SchoolManagementSystem.Service
 
             _studentManagement.GetAllStudents();
             _studentManagement.GetStudentGrades(student1);
+
+            Console.WriteLine();
         }
 
 
