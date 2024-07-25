@@ -13,9 +13,7 @@ namespace SchoolManagementSystem.Service
 
         public void GetTeacherStudentGrades(Teacher teacher)
         {
-            forach() {
-
-            }
+            
         }
     }
 }

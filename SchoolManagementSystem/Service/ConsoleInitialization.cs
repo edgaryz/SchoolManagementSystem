@@ -21,7 +21,7 @@ namespace SchoolManagementSystem.Service
             _studentManagement.AddStudent(student2);
 
             _studentManagement.GetAllStudents();
-            Console.WriteLine();
+            _studentManagement.GetStudentGrades(student1);
         }
 
 
