@@ -14,9 +14,9 @@ namespace SchoolManagementSystem.Models
             Console.WriteLine($"{teacher.FirstName} {teacher.LastName} has graded {student.Name} {student.SurName} with grade {grade}");
         }
 
-        public void GetTeacherStudentGrades(Teacher teacher)
-        {
+        //public void GetTeacherStudentGrades(Teacher teacher)
+        //{
 
-        }
+        //}
     }
 }

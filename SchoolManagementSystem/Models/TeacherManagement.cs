@@ -8,19 +8,16 @@ namespace SchoolManagementSystem.Models
 {
     public class TeacherManagement
     {
-        public List<Teacher> Teachers  { get; set; }
+        public List<Teacher> Teachers  { get; set; } = new List<Teacher>();
 
         public void AddTeacher(Teacher teacher)
         {
-            Teachers = new List<Teacher> { teacher };
+            Teachers.Add(teacher);
         }
 
-        public void GetAllTeachers()
+        public List<Teacher> GetAllTeachers()
         {
-            foreach (Teacher teacher in Teachers)
-            {
-                Console.WriteLine($"teacher");
-            }
+            return Teachers;
         }
     }
 }
