@@ -27,7 +27,7 @@ namespace SchoolManagementSystem.Service
 
         public void GetStudentGrades(Student student)
         {
-            foreach(var studentGrade in student.Grades)
+            foreach (var studentGrade in student.Grades)
             {
                 Console.WriteLine(studentGrade);
             }

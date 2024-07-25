@@ -1,9 +1,4 @@
 ﻿using SchoolManagementSystem.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SchoolManagementSystem.Service
 {
@@ -22,7 +17,11 @@ namespace SchoolManagementSystem.Service
 
             Student student2 = new Student("Kirill", "Bravin", 33, 10);
 
+            _studentManagement.AddStudent(student1);
+            _studentManagement.AddStudent(student2);
+
             _studentManagement.GetAllStudents();
+            Console.WriteLine();
         }
 
 

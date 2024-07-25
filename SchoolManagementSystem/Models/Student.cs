@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace SchoolManagementSystem.Models
+﻿namespace SchoolManagementSystem.Models
 {
     public class Student
     {
