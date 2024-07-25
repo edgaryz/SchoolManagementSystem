@@ -21,7 +21,6 @@ namespace SchoolManagementSystem.Service
             {
                 Console.WriteLine(student);
             }
-
             return Students;
         }
 
