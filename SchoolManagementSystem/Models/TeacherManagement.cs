@@ -15,6 +15,12 @@ namespace SchoolManagementSystem.Models
             Teachers = new List<Teacher> { teacher };
         }
 
-
+        public void GetAllTeachers()
+        {
+            foreach (Teacher teacher in Teachers)
+            {
+                Console.WriteLine($"teacher");
+            }
+        }
     }
 }
