@@ -15,12 +15,9 @@ namespace SchoolManagementSystem.Service
             Students.Add(student);
         }
 
-        public void GetAllStudents()
+        public List<Student> GetAllStudents()
         {
-            foreach (Student student in Students)
-            {
-                Console.WriteLine(student);
-            }
+            return Students;
         }
 
         public void GetStudentGrades(Student student)
@@ -29,6 +26,12 @@ namespace SchoolManagementSystem.Service
             {
                 Console.WriteLine(studentGrade);
             }
+        }
+
+        public bool FindStudent(string firstName, string lastName)
+        {
+            Student student = Students.Find(x => x.Name == firstName && x.SurName == lastName);
+            return student != null;
         }
     }
 }

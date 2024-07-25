@@ -23,5 +23,7 @@ namespace SchoolManagementSystem.Models
         {
             Console.WriteLine($"Teacher - {FirstName} {LastName} teaches {Subject}");
         }
+
+
     }
 }

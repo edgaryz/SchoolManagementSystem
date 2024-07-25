@@ -20,5 +20,11 @@ namespace SchoolManagementSystem.Service
         {
             return Teachers;
         }
+
+        public bool FindTeacher(string firstName, string lastName)
+        {
+            Teacher teacher = Teachers.Find(x => x.FirstName == firstName && x.LastName == lastName);
+            return teacher != null;
+        }
     }
 }
