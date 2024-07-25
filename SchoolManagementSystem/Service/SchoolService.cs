@@ -25,8 +25,10 @@ namespace SchoolManagementSystem.Service
 
         public void AddGrade(string studentFirstName, string studentLastName, string teacherFirstName, string teacherLastName, Grade grade)
         {
-            if (_studentManagementService.FindStudent(studentFirstName, studentLastName) &&
-                _teacherManagementService.FindTeacher(teacherFirstName, teacherLastName))
+            Student requiredStudent = _studentManagementService.FindStudent(studentFirstName, studentLastName);
+            Teacher requiredTeacher = _teacherManagementService.FindTeacher(teacherFirstName, teacherLastName);
+
+            if (requiredStudent != null && requiredTeacher != null)
             {
 
             }

@@ -28,10 +28,10 @@ namespace SchoolManagementSystem.Service
             }
         }
 
-        public bool FindStudent(string firstName, string lastName)
+        public Student FindStudent(string firstName, string lastName)
         {
-            Student student = Students.Find(x => x.Name == firstName && x.SurName == lastName);
-            return student != null;
+            Student student = Students.Find(x => x.FirstName == firstName && x.LastName == lastName);
+            return student;
         }
     }
 }

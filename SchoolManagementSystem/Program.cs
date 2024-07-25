@@ -1,10 +1,26 @@
-﻿namespace MyProgram
+﻿using SchoolManagementSystem.Models;
+using SchoolManagementSystem.Service;
+
+namespace MyProgram
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            MokiniuValdymas mokiniuValdymas = new MokiniuValdymas();
+            StudentManagementService studentManagement = new StudentManagementService();
+            TeacherManagementService teacherManagement = new TeacherManagementService();
+            SchoolService schoolService = new SchoolService(studentManagement, teacherManagement);
+
+            Student student1 = new Student("Edgar", "Sokol", 28, 10);
+            student1.AddGrade(new Grade("Math", DateOnly.Parse("2024-07-25"), 7));
+
+            Student student2 = new Student("Kirill", "Bravin", 33, 10);
+
+            Console.WriteLine(studentManagement.GetAllStudents());
+            
+            Console.WriteLine();
+
+            /*MokiniuValdymas mokiniuValdymas = new MokiniuValdymas();
             MokytojuValdymas mokytojuValdymas = new MokytojuValdymas();
             MokyklaService mokyklaService = new MokyklaService(mokiniuValdymas, mokytojuValdymas);
 
@@ -98,7 +114,7 @@
                 }
 
                 Console.WriteLine();
-            }
+            }*/
         }
     }
 }

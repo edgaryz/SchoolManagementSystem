@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SchoolManagementSystem.Models;
+﻿using SchoolManagementSystem.Models;
 
 namespace SchoolManagementSystem.Service
 {
@@ -21,10 +16,12 @@ namespace SchoolManagementSystem.Service
             return Teachers;
         }
 
-        public bool FindTeacher(string firstName, string lastName)
+        public Teacher FindTeacher(string firstName, string lastName)
         {
             Teacher teacher = Teachers.Find(x => x.FirstName == firstName && x.LastName == lastName);
-            return teacher != null;
+            return teacher;
         }
+
+
     }
 }
