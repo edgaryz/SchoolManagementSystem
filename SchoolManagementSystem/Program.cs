@@ -1,5 +1,4 @@
-﻿using SchoolManagementSystem.Models;
-using SchoolManagementSystem.Service;
+﻿using SchoolManagementSystem.Service;
 
 namespace MyProgram
 {
