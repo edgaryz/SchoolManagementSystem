@@ -17,6 +17,11 @@ namespace SchoolManagementSystem.Service
 
         public List<Student> GetAllStudents()
         {
+            foreach (var student in Students)
+            {
+                Console.WriteLine(student);
+            }
+
             return Students;
         }
 

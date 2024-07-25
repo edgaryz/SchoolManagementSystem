@@ -1,4 +1,6 @@
-﻿namespace SchoolManagementSystem.Models
+﻿using System.Diagnostics;
+
+namespace SchoolManagementSystem.Models
 {
     public class Student
     {
@@ -28,5 +30,9 @@
             Grades.Add(grade);
         }
 
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}, Age: {Age}, Grade: {Grade}";
+        }
     }
 }
