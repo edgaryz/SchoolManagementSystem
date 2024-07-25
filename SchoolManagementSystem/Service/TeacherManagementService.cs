@@ -26,9 +26,13 @@ namespace SchoolManagementSystem.Service
             return teacher;
         }
 
-        public void AddGrade(Student student, Teacher teacher, Grade grade)
+        public void AddGrade(Student student, Teacher teacher, int grade)
         {
-            student.AddGrade(grade);
+            string subject = teacher.Subject;
+            DateOnly currentDate = DateOnly.FromDateTime(DateTime.Now);
+            int gradeValue = grade;
+            Grade newGrade = new Grade(subject, currentDate, gradeValue);
+            student.AddGrade(newGrade);
             Console.WriteLine($"{teacher.FirstName} {teacher.LastName} has graded {student.FirstName} {student.LastName} with grade {grade}");
         }
 

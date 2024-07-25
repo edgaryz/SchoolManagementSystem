@@ -18,6 +18,9 @@
             Console.WriteLine($"Teacher - {FirstName} {LastName} teaches {Subject}");
         }
 
-
+        public override string ToString()
+        {
+            return $"{Subject}: {FirstName} {LastName}";
+        }
     }
 }

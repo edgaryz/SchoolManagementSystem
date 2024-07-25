@@ -6,7 +6,7 @@
         public string LastName { get; set; }
         public int Age { get; set; }
         public int Grade { get; set; }
-        public List<Grade> Grades { get; set; }
+        public List<Grade> Grades { get; set; } = new List<Grade>();
 
         public Student() { }
         public Student(string name, string surName, int age, int grade)
