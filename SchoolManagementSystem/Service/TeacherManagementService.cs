@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SchoolManagementSystem.Models;
 
-namespace SchoolManagementSystem.Models
+namespace SchoolManagementSystem.Service
 {
-    public class TeacherManagement
+    public class TeacherManagementService
     {
-        public List<Teacher> Teachers  { get; set; } = new List<Teacher>();
+        public List<Teacher> Teachers { get; set; } = new List<Teacher>();
 
         public void AddTeacher(Teacher teacher)
         {

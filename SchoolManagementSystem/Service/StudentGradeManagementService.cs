@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SchoolManagementSystem.Models;
 
-namespace SchoolManagementSystem.Models
+namespace SchoolManagementSystem.Service
 {
-    public class Student_Grade_Management
+    public class StudentGradeManagementService
     {
         public void AddGrade(Student student, Teacher teacher, Grade grade)
         {
@@ -14,9 +15,9 @@ namespace SchoolManagementSystem.Models
             Console.WriteLine($"{teacher.FirstName} {teacher.LastName} has graded {student.Name} {student.SurName} with grade {grade}");
         }
 
-        //public void GetTeacherStudentGrades(Teacher teacher)
-        //{
+        public void GetTeacherStudentGrades(Teacher teacher)
+        {
 
-        //}
+        }
     }
 }
