@@ -23,15 +23,39 @@ namespace SchoolManagementSystem.Service
             _teacherManagementService.AddTeacher(teacher);
         }
 
-        public void AddGrade(string studentFirstName, string studentLastName, string teacherFirstName, string teacherLastName, Grade grade)
+        public void ShowAllStudents()
         {
-            Student requiredStudent = _studentManagementService.FindStudent(studentFirstName, studentLastName);
-            Teacher requiredTeacher = _teacherManagementService.FindTeacher(teacherFirstName, teacherLastName);
+            _studentManagementService.GetAllStudents();
+        }
 
-            if (requiredStudent != null && requiredTeacher != null)
-            {
+        public void ShowAllTeachers() 
+        {
+            _teacherManagementService.GetAllTeachers();
+        }
 
-            }
+        public void ShowStudentGrades(Student student)
+        {
+            _studentManagementService.GetStudentGrades(student);
+        }
+
+        public void FindStudent(string firstName, string lastName)
+        {
+            _studentManagementService.FindStudent(firstName, lastName);
+        }
+
+        public void FindTeacher(string firstName, string lastName)
+        {
+            _teacherManagementService.FindTeacher(firstName, lastName);
+        }
+
+        public void AddGrade(Student student, Teacher teacher, int grade)
+        {
+            _teacherManagementService.AddGrade(student, teacher, grade);
+        }
+
+        public void ShowMarksByTeacherOfStudents(Teacher teacher, List<Student> gradeList)
+        {
+            _teacherManagementService.GetTeacherStudentGrades(teacher, gradeList);
         }
     }
 }

@@ -12,7 +12,18 @@ namespace SchoolManagementSystem.Service
 
         public void AddStudent(Student student)
         {
-            Students.Add(student);
+            foreach (Student st in Students)
+            {
+                if (st.FirstName == student.FirstName && st.LastName == student.LastName)
+                {
+                    Console.WriteLine($"Student with the name {st.FirstName} {st.LastName} already exists!");
+                    break;
+                } else
+                {
+                    Students.Add(student);
+                    break;
+                }
+            }
         }
 
         public List<Student> GetAllStudents()
